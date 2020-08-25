@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-    <!--load all styles -->
-    <link href="assets/css/all.css" rel="stylesheet">
+
 
     <!-- custom css -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+
+    <!-- custom  js -->
+    <link rel="stylesheet" href="assets/js/main.js">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
@@ -21,7 +22,10 @@
     <!-- jqury min .css -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
-    <title>accordion form </title>
+    <!-- select2 jsCDN -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+
+    <title>accordion forms </title>
 </head>
 
 <body>
@@ -168,7 +172,14 @@
 
                                             <div class="form-group col-md-4">
                                                 <label for="exampleInputEmail1">Selected  Users</label>
-                                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                <br>
+                                                <select class="form-control js-example-basic-multiple" name="states[]" multiple="multiple">
+                                                    <option value="Mu">Munna</option>
+                                                    <option value="Ha">Hasan</option>
+                                                    <option value="Km">kamrul</option>
+                                                    <option value="Em">Emon</option>
+                                                    <option value="Ra">Rasel</option>
+                                                  </select>
                                             </div>
 
 
@@ -242,13 +253,13 @@
                         <div class="card">
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                    <button class="btn btn btn text btn-success float-right " type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                    <button class="btn btn btn text btn-success float-right " type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
                                 Add Item
                               </button>
                                 </h2>
                             </div>
 
-                            <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div id="collapseFive" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div class="card-body">
                                     <form>
                                         <div class="form-row">
@@ -279,10 +290,6 @@
                         </div>
 
 
-
-
-
-
                     </div>
 
                 </div>
@@ -298,6 +305,14 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js " integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J " crossorigin="anonymous "></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.js-example-basic-multiple').select2();
+        });
+    </script>
 </body>
 
 </html>
